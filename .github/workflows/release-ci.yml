@@ -42,13 +42,13 @@ jobs:
         with:
           artifacts: "package/*.zip"
           draft: true
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.ACCESS_TOKEN }}
 
       - name: Create nightly release
         if: ${{ github.repository == 'rime/squirrel' && github.ref == 'refs/heads/master' }}
         uses: 'marvinpinto/action-automatic-releases@latest'
         with:
-          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          repo_token: ${{ secrets.ACCESS_TOKEN }}
           automatic_release_tag: latest
           prerelease: true
           title: "Nightly build"
