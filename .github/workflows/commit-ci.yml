@@ -10,7 +10,7 @@ jobs:
       - name: Checkout last commit
         uses: actions/checkout@v4
         with:
-          ref: bc-branch
+          ref: 0.0188
           submodules: true
 
       - name: Install clang-format
