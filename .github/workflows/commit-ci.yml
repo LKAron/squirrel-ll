@@ -2,7 +2,7 @@ name: commit ci
 on:
   push:
     branches:
-      - '*'
+      - bc-branch
 jobs:
   build:
     runs-on: macos-14
